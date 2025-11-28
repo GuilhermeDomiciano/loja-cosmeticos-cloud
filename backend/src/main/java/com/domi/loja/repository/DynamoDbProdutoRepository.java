@@ -1,6 +1,3 @@
-public class DynamoDbProdutoRepository {
-    
-}
 package com.domi.loja.repository;
 
 import com.domi.loja.domain.Produto;

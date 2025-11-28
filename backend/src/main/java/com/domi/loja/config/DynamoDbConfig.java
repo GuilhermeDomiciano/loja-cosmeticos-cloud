@@ -6,6 +6,7 @@ import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClientBuilder;
 
 import java.net.URI;
 
@@ -18,7 +19,7 @@ public class DynamoDbConfig {
         String region = System.getenv().getOrDefault("AWS_REGION", "us-east-1");
         String endpoint = System.getenv("AWS_ENDPOINT"); // ex: http://localstack:4566 ou http://localhost:4566
 
-        DynamoDbClient.Builder builder = DynamoDbClient.builder()
+        DynamoDbClientBuilder builder = DynamoDbClient.builder()
                 .region(Region.of(region))
                 .credentialsProvider(
                         StaticCredentialsProvider.create(

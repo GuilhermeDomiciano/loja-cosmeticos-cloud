@@ -18,3 +18,5 @@ localstack-data/
 
 # Logs
 *.log
+
+AGENTS.md
